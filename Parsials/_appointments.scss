@@ -1,0 +1,85 @@
+#appointment{
+    h2{
+        margin-bottom: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 4%;
+
+        .info{
+            p{
+                margin: 0 0 2rem;
+            }
+            article{
+                display: flex;
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+                small{
+                    margin-top: .4rem;
+                    color: gray;
+                }
+                .info-icon{
+                    background: $secondary-color;
+                    color: $white-color;
+                    border-radius: 50%;
+                    padding: 0.8rem;
+                    display: flex;
+                    height: fit-content;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            .form-group{
+                font-size: .85rem;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+                font-weight: 600 ;
+            }
+            input,textarea,select{
+                background: $white-color;
+                padding: 0.85rem 1rem;
+                display: block;
+                width: 100% ;
+                resize: none;
+            }
+            textarea{
+                background:rgba($secondary-color,0.3);
+            }
+        }
+    }
+} 
+
+/*===============media querries(medium devices)==============*/
+
+@media screen and (max-width:1024px) {
+
+    #appointment{
+        .container{
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 0 auto;
+            place-items: center;
+             
+            .info{
+                p{
+                text-align: center;
+                }
+            }
+            form{
+                width: 100%;
+            }
+        }
+    }
+} 
+
+
+
+/*===============media querries(Small devices)==============*/
+@media screen and (max-width:600px) {
+
+} 

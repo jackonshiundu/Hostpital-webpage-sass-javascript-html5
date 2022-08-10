@@ -1,0 +1,44 @@
+.swiper{
+    width: $container-lg;
+    .swiper-wrapper{
+        margin-bottom: 4rem;
+        article{
+            @include gradientbackground;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+
+            p{
+                margin-bottom: 1.5rem;
+            }
+            .patient{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                .avatar{
+                    width: 2.5rem;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .swiper-pagination-bullet{
+        background:$primary-color;
+    }
+
+}
+
+
+/*===============media querries(Small devices)==============*/
+@media screen and (max-width:600px) {
+    .swiper{
+        .container{
+            .swiper-slide{
+                padding: 1.5rem;
+            }
+        }
+    }
+}

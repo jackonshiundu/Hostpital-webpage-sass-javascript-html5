@@ -1,0 +1,113 @@
+#specialists{
+    .container{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.5rem;
+
+        article{
+            background: $white-color;
+            border-radius: 1rem;
+            box-shadow: 0 1.5rem 1.5rem rgba($black-color,0.1);
+            position: relative;
+
+            &:hover{
+                box-shadow: none;
+                .spacialist-image::before{
+                    left: 0;
+                    border-radius: 1rem;
+                }
+                .spacialist-socials,.spacialist-Whatsapp{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .spacialist-image{
+                height: 20rem;
+                position: relative;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    left: -100%;
+                    background: linear-gradient(135deg, rgba($primary-color,0.8),rgba($primary-color-variant,0.8));
+                    border-radius: 50%;
+                    transition: all 500ms ease;
+
+                     
+                }
+            }
+            .spacialist-details{
+                margin: 1rem 0;  
+                text-align: center;
+            }
+            .spacialist-socials{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                right:1.2rem ;
+                top: 1.2rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 500ms 400ms ease;
+                
+                a{
+                    background: $white-color;
+                    color: $primary-color;
+                    padding: 0.4rem;
+                    display: flex;
+                    font-size: 0.8rem;
+                    border-radius: 50%;
+                    &:hover{
+                        background: $primary-color;
+                        color: $white-color;
+                    }
+                }
+                
+            }
+            .spacialist-Whatsapp{
+                background:$success-color;
+                color: $white-color;
+                border-radius: 50%;
+                left: 50%;
+                position: absolute;
+                padding: .4rem;
+                font-size: 1.5rem;
+                transform:translateX(-50%);
+                bottom: 30%;
+                display: flex;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 1s 400ms ease;
+        }
+        }
+    }
+}
+/*===============media querries(Medium devices)==============*/
+
+@media screen and (max-width:1024px) {
+    #specialists{
+        .container{
+            grid-template-columns: 1fr 1fr;
+        }
+ }
+}
+
+
+
+/*===============media querries(Small devices)==============*/
+@media screen and (max-width:600px) {
+    #specialists{
+        .container{
+            grid-template-columns: 1fr;
+        }
+    }
+}

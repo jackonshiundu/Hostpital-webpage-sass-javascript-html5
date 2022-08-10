@@ -1,0 +1,55 @@
+header{
+    @include gradientbackground;
+    padding: 4rem 0;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    overflow: hidden ;
+    .container{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 8%;
+        justify-content: space-between;
+        
+        .header-content{
+            h1{
+                font-size: 2.5 rem;
+                font-weight: 500;
+                line-height: 1.1;
+                letter-spacing: -3px;
+            }
+            p{
+                margin: 1rem 0 2rem ;
+                color: $light-color ;
+            }
+        }
+    }
+}
+/*median devices media queries*/
+@media screen and (max-width:1024px) {
+    header{
+
+        .container{
+           .header-content{
+               h1{
+                   font-size: 2.5rem;
+               }
+           }
+        }
+    }
+}
+/*small devices media queries*/
+
+@media screen and(max-width:600px) {
+    header{
+        .container{
+            grid-template-columns: 1fr;
+            text-align: center;
+            .header-content{
+                margin: 0.8rem 0 1.5rem;
+            }
+        }  
+    }
+}
